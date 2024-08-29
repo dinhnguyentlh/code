@@ -1,0 +1,51 @@
+#root {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.App{
+  /* max-width: 1200px; */
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;line-height: 1.5;
+}
+.text-primary{
+  color:#0D6EFD;
+}
+button{
+  padding: 8px 16px ;
+  background-color: #3c88fa;
+  color: #ffff;
+  border-radius: 8px;
+}
+
+.tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+}
