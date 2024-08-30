@@ -30,14 +30,22 @@ const VideoUpload: React.FC<VideoUploadProps> = ({ onVideoSelected }) => {
   return (
     <div>
       <div
-        {...getRootProps()}
-        style={{
-          border: "2px dashed #888",
-          padding: "20px",
-          textAlign: "center",
-        }}
+      // {...getRootProps()}
+      // style={{
+      //   border: "2px dashed #888",
+      //   padding: "20px",
+      //   textAlign: "center",
+      // }}
       >
-        <input {...getInputProps()} />
+        <input
+          accept="video/*"
+          type="file"
+          onChange={(e) => {
+            const file = e.target.files?.[0];
+            setVideoFile(file);
+            onVideoSelected(file);
+          }}
+        />
         <p>Drag & drop a video file here, or click to select one</p>
       </div>
       {videoFile && <ReactPlayer url={videoFile} controls={true} />}

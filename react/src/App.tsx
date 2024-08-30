@@ -11,7 +11,7 @@ function App() {
       <h1>Video Editor</h1>
       <VideoUpload onVideoSelected={(file) => setVideoFile(file)} />
       {videoFile && <VideoCutter videoFile={videoFile} />}
-      {/* <EditVideoPage /> */}
+      <EditVideoPage />
     </div>
   );
 }
